@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 import com.example.lenovo_g50_70.notepad.R;
 import com.example.lenovo_g50_70.notepad.model.Notepad;
-import com.example.lenovo_g50_70.notepad.ui.activity.NoteDetailActivity;
-import com.example.lenovo_g50_70.notepad.ui.activity.NoteEditActivity;
+import com.example.lenovo_g50_70.notepad.activity.NoteDetailActivity;
+import com.example.lenovo_g50_70.notepad.activity.NoteEditActivity;
 import com.example.lenovo_g50_70.notepad.view.NoteChangeListener;
 
 import java.util.List;

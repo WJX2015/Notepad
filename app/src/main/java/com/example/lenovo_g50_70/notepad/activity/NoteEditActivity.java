@@ -1,4 +1,4 @@
-package com.example.lenovo_g50_70.notepad.ui.activity;
+package com.example.lenovo_g50_70.notepad.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;

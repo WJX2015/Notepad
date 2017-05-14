@@ -5,6 +5,6 @@
     android:id="@+id/activity_note_edit"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.lenovo_g50_70.notepad.ui.activity.NoteEditActivity">
+    tools:context="com.example.lenovo_g50_70.notepad.activity.NoteEditActivity">
     <include layout="@layout/notepad"/>
 </RelativeLayout>

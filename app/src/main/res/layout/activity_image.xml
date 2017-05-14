@@ -7,6 +7,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/image"
     android:fitsSystemWindows="true"
-    tools:context="com.example.lenovo_g50_70.notepad.ui.activity.ImageActivity">
+    tools:context="com.example.lenovo_g50_70.notepad.activity.ImageActivity">
 
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.lenovo_g50_70.notepad.ui.activity;
+package com.example.lenovo_g50_70.notepad.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

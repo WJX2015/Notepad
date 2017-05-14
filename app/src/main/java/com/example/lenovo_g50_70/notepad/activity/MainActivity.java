@@ -1,4 +1,4 @@
-package com.example.lenovo_g50_70.notepad.ui.activity;
+package com.example.lenovo_g50_70.notepad.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,9 +12,6 @@ import com.example.lenovo_g50_70.notepad.adapter.NoteAdapter;
 import com.example.lenovo_g50_70.notepad.view.NoteChangeListener;
 import com.example.lenovo_g50_70.notepad.model.Notepad;
 import com.example.lenovo_g50_70.notepad.R;
-import com.example.lenovo_g50_70.notepad.presenter.MainPresenter;
-import com.example.lenovo_g50_70.notepad.presenter.impl.MainPresenterImpl;
-import com.example.lenovo_g50_70.notepad.view.MainView;
 
 import org.litepal.crud.DataSupport;
 
@@ -23,23 +20,19 @@ import java.util.List;
 
 import static com.example.lenovo_g50_70.notepad.R.id.recyclerView;
 
-public class MainActivity extends AppCompatActivity implements NoteChangeListener,MainView {
+public class MainActivity extends AppCompatActivity implements NoteChangeListener {
     private Intent intent;
     private FloatingActionButton mButton;
     private RecyclerView mRecyclerView;
     private NoteAdapter mNoteAdapter;
     private List<Notepad> mNotepads=new ArrayList<>();
     private LinearLayoutManager mManager;
-    private MainPresenter mPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mPresenter=new MainPresenterImpl(this);
-        delEmpty();
         initView();
-        mPresenter.onLoadData();
     }
 
     private void initView() {
@@ -78,19 +71,5 @@ public class MainActivity extends AppCompatActivity implements NoteChangeListene
     private void queryAll() {
         mNotepads = DataSupport.findAll(Notepad.class);
         mNoteAdapter.changeNote(mNotepads);
-    }
-
-    private void delEmpty(){
-        mNotepads = DataSupport.findAll(Notepad.class);
-        for(Notepad note : mNotepads){
-            if(note.getNode().length()==0){
-                note.delete();
-            }
-        }
-    }
-
-    @Override
-    public void onLoadDataSuccess() {
-        //datasetchange
     }
 }

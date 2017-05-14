@@ -1,4 +1,4 @@
-package com.example.lenovo_g50_70.notepad.ui.activity;
+package com.example.lenovo_g50_70.notepad.activity;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -30,7 +30,7 @@ public class ImageActivity extends AppCompatActivity {
             public void run() {
                 try {
                     Thread.sleep(3000);
-                    startActivity(new Intent(ImageActivity.this,MainActivity.class));
+                    startActivity(new Intent(ImageActivity.this,LandActivity.class));
                     overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
                     finish();
                 } catch (InterruptedException e) {
